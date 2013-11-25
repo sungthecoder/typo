@@ -61,6 +61,9 @@ class Content < ActiveRecord::Base
   after_destroy lambda { |c|  c.invalidates_cache?(true) }
 
   include Stateful
+  
+  def merge_article
+  end
 
   def invalidates_cache?(on_destruction = false)
     @invalidates_cache ||= if on_destruction

@@ -147,7 +147,10 @@
       <%= render 'admin/content/attachment', { :attachment_num => 1, :hidden => false } -%>
     </ul>
   </div>    
-  </div>
 
+  <div class=''>
+    <h4><%= _("Merge Articles") %></h4>
+    <%= render ('admin/content/merge') if current_user.admin?-%>
+  </div>
 </div>
 
